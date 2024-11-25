@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище SchoolChildNEW2ModelContainer" CdmEntityContainer="SchoolChildNEW2Entities">
+    <EntitySetMapping Name="Account">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="id_account" ColumnName="id_account" />
+          <ScalarProperty Name="Login_" ColumnName="Login_" />
+          <ScalarProperty Name="Password_" ColumnName="Password_" />
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activities">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Activities">
+        <MappingFragment StoreEntitySet="Activities">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="namee" ColumnName="namee" />
+          <ScalarProperty Name="age_group" ColumnName="age_group" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Activity_Schedule">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Activity_Schedule">
+        <MappingFragment StoreEntitySet="Activity_Schedule">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="activity_id" ColumnName="activity_id" />
+          <ScalarProperty Name="day_of_week" ColumnName="day_of_week" />
+          <ScalarProperty Name="time_start" ColumnName="time_start" />
+          <ScalarProperty Name="time_END" ColumnName="time_END" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Children">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Children">
+        <MappingFragment StoreEntitySet="Children">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="parents_id" ColumnName="parents_id" />
+          <ScalarProperty Name="namee" ColumnName="namee" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Date_Of_Enrolment">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Date_Of_Enrolment">
+        <MappingFragment StoreEntitySet="Date_Of_Enrolment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="enrollment_date" ColumnName="enrollment_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enrollment">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Enrollment">
+        <MappingFragment StoreEntitySet="Enrollment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="child_id" ColumnName="child_id" />
+          <ScalarProperty Name="activity_schedule_id" ColumnName="activity_schedule_id" />
+          <ScalarProperty Name="date_id" ColumnName="date_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instructors">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Instructors">
+        <MappingFragment StoreEntitySet="Instructors">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Instructors_Assignment">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Instructors_Assignment">
+        <MappingFragment StoreEntitySet="Instructors_Assignment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="activity_schedule_id" ColumnName="activity_schedule_id" />
+          <ScalarProperty Name="instructor_id" ColumnName="instructor_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parent_contacts">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Parent_contacts">
+        <MappingFragment StoreEntitySet="Parent_contacts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parents">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Parents">
+        <MappingFragment StoreEntitySet="Parents">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="namee" ColumnName="namee" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="parent_contact_id" ColumnName="parent_contact_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Requests">
+        <MappingFragment StoreEntitySet="Requests">
+          <ScalarProperty Name="request_id" ColumnName="request_id" />
+          <ScalarProperty Name="children_id" ColumnName="children_id" />
+          <ScalarProperty Name="parents_id" ColumnName="parents_id" />
+          <ScalarProperty Name="parent_contact_id" ColumnName="parent_contact_id" />
+          <ScalarProperty Name="enrollment_date_id" ColumnName="enrollment_date_id" />
+          <ScalarProperty Name="activities_id" ColumnName="activities_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role_">
+      <EntityTypeMapping TypeName="SchoolChildNEW2Model.Role_">
+        <MappingFragment StoreEntitySet="Role_">
+          <ScalarProperty Name="id_role" ColumnName="id_role" />
+          <ScalarProperty Name="name_role" ColumnName="name_role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

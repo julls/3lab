@@ -1,0 +1,57 @@
+﻿<Window x:Class="дэ2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:дэ2"
+        mc:Ignorable="d"
+        Title="Главное окно" Height="500" Width="950">
+    <Grid Background="#FFD0C4C4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="377"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="SchoolChildNew" AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeColumns="False" Margin="0,44,0,0"   >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО ребёнка" Binding="{Binding Children.namee}"
+                                    Width="160"/>
+                <DataGridTextColumn Header="ФИО родителя" Binding="{Binding Parents.namee}" Width="160"/>
+                <DataGridTextColumn Header="Номер родителя" Binding="{Binding Parent_contacts.phone_number}" Width="160"/>
+                <DataGridTextColumn Header="Дата первого занятия" Binding="{Binding Date_Of_Enrolment.enrollment_date}" Width="160"/>
+                <DataGridTextColumn Header="Группа" Binding="{Binding Activities.namee}" Width="160"/>
+                <DataGridTemplateColumn x:Name="GridTemplate" Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" x:Name="BtnEdit" Click="BtnEdit_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить" Grid.Row="1" HorizontalAlignment="Left" Name="BtnAdd" Click="BtnAdd_Click" Background="#FFF7EBEB"/>
+        <Button Content="Вернуться" Grid.Row="1" HorizontalAlignment="Left" Name="BtnAutorization" Click="BtnAuthorization_Click" Margin="487,0,0,0" Background="#FFF7EBEB"/>
+        <Button Content="Обновить" Grid.Row="1" HorizontalAlignment="Left" Name="BtnUp" Background="#FFF7EBEB"
+Click="BtnUp_Click" Margin="213,0,0,0" />
+        <Button Content="Удалить" Grid.Row="1" HorizontalAlignment="Right" Name="BtnDelet" Background="#FFF7EBEB"
+Click="BtnDelet_Click" />
+       
+        <TextBlock Text="Поиск" HorizontalAlignment="Left"
+Margin="29,10,0,0" VerticalAlignment="Top" Width="50" />
+        <TextBox x:Name="SearchBox" Width="200"
+Height="22" TextChanged="SearchBox_TextChanged"
+Margin="79,8,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+
+        <ComboBox x:Name="ComboStatus" DisplayMemberPath="namee" Margin="378,12,0,0" VerticalAlignment="Top"
+Height="23" HorizontalAlignment="Left" Width="130" />
+        
+        <TextBlock Text="Фильтр" HorizontalAlignment="Left"
+Margin="328,12,0,0" VerticalAlignment="Top" Width="50" />
+        
+        <Button Content="Применить" HorizontalAlignment="Left" Name="BtnOut"
+Click="BtnOut_Click" Margin="520,10,0,0" VerticalAlignment="Top" Height="24"
+Width="109" />
+        <Image Margin="795,10,55,337" Source="/11.jpg" Width="100" Height="30"/>
+
+    </Grid>
+</Window>

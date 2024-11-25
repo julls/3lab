@@ -1,0 +1,19 @@
+﻿<Window x:Class="дэ2.TableWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:дэ2"
+        mc:Ignorable="d"
+       Title="TableWindow" Height="650" Width="500">
+    
+    <DataGrid x:Name="tableWindow" AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeColumns="False" Margin="0,44,0,0"   >
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Группа" Binding="{Binding Activities.id}" Width="auto"/>
+            <DataGridTextColumn Header="Название" Binding="{Binding Activities.namee}" Width="auto"/>
+            <DataGridTextColumn Header="День недели" Binding="{Binding day_of_week}" Width="auto"/>
+            <DataGridTextColumn Header="Время начала" Binding="{Binding time_start}" Width="auto"/>
+            <DataGridTextColumn Header="Время конца" Binding="{Binding time_END}" Width="auto"/>
+        </DataGrid.Columns>
+    </DataGrid>
+</Window>

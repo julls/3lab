@@ -1,0 +1,22 @@
+﻿<Window x:Class="дэ2.RefreshWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:дэ2"
+        mc:Ignorable="d"
+        Title="RefreshWindow" Height="450" Width="400">
+    <StackPanel Margin="10">
+        <TextBlock Text="ФИО ребёнка"/>
+        <TextBox x:Name="FioChildTextBox"/>
+        <TextBlock Text="ФИО родителя"/>
+        <TextBox x:Name="FioParentTextBox1"/>
+        <TextBlock Text="Номер родителя"/>
+        <TextBox x:Name="NumberParentTextBox"/>
+        <TextBlock Text="Дата зачисления"/>
+        <ComboBox x:Name="ComboStatus1" DisplayMemberPath="enrollment_date"/>
+        <TextBlock Text="Группа"/>
+        <ComboBox x:Name="ComboStatus" DisplayMemberPath="namee"/>
+        <Button Content="Обновить" Click="UpdateButton_Click"/>
+    </StackPanel>
+</Window>

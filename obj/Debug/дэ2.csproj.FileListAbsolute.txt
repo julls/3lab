@@ -1,0 +1,152 @@
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2.csproj.AssemblyReference.cache
+D:\isp-32\решетникова\дэ2\obj\Debug\MainWindow.g.cs
+D:\isp-32\решетникова\дэ2\obj\Debug\App.g.cs
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2_Content.g.cs
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2_MarkupCompile.cache
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2_MarkupCompile.lref
+D:\isp-32\решетникова\дэ2\obj\Debug\AddEditWindow.g.cs
+D:\isp-32\решетникова\дэ2\obj\Debug\AuthorizationWindow.g.cs
+D:\isp-32\решетникова\дэ2\obj\Debug\tableWindow.g.cs
+D:\isp-32\решетникова\дэ2\bin\Debug\дэ2.exe.config
+D:\isp-32\решетникова\дэ2\bin\Debug\дэ2.exe
+D:\isp-32\решетникова\дэ2\bin\Debug\дэ2.pdb
+D:\isp-32\решетникова\дэ2\bin\Debug\EntityFramework.dll
+D:\isp-32\решетникова\дэ2\bin\Debug\EntityFramework.SqlServer.dll
+D:\isp-32\решетникова\дэ2\bin\Debug\EntityFramework.xml
+D:\isp-32\решетникова\дэ2\bin\Debug\EntityFramework.SqlServer.xml
+D:\isp-32\решетникова\дэ2\bin\Debug\ru\EntityFramework.resources.dll
+D:\isp-32\решетникова\дэ2\obj\Debug\MainWindow.baml
+D:\isp-32\решетникова\дэ2\obj\Debug\AddEditWindow.baml
+D:\isp-32\решетникова\дэ2\obj\Debug\AuthorizationWindow.baml
+D:\isp-32\решетникова\дэ2\obj\Debug\tableWindow.baml
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2.g.resources
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2.Properties.Resources.resources
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2.csproj.GenerateResource.cache
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2.csproj.CoreCompileInputs.cache
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2.csproj.Up2Date
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2.exe
+D:\isp-32\решетникова\дэ2\obj\Debug\дэ2.pdb
+D:\isp-32\решетникова\дэ2\obj\Debug\RefreshWindow.g.cs
+D:\isp-32\решетникова\дэ2\obj\Debug\RefreshWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\bin\Debug\дэ2.exe.config
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\bin\Debug\дэ2.exe
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\bin\Debug\дэ2.pdb
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\bin\Debug\EntityFramework.dll
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\bin\Debug\EntityFramework.SqlServer.dll
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\bin\Debug\EntityFramework.xml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\bin\Debug\EntityFramework.SqlServer.xml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\bin\Debug\ru\EntityFramework.resources.dll
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2.csproj.AssemblyReference.cache
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\AddEditWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\AuthorizationWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\MainWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\RefreshWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\tableWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\App.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2_Content.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2_MarkupCompile.cache
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2_MarkupCompile.lref
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\AddEditWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\AuthorizationWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\MainWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\RefreshWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\tableWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2.g.resources
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2.Properties.Resources.resources
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2.csproj.GenerateResource.cache
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2.csproj.CoreCompileInputs.cache
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2.csproj.CopyComplete
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2.exe
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2\obj\Debug\дэ2.pdb
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\bin\Debug\дэ2.exe.config
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\bin\Debug\дэ2.exe
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\bin\Debug\дэ2.pdb
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\bin\Debug\EntityFramework.dll
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\bin\Debug\EntityFramework.SqlServer.dll
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\bin\Debug\EntityFramework.xml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\bin\Debug\EntityFramework.SqlServer.xml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\bin\Debug\ru\EntityFramework.resources.dll
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2.csproj.AssemblyReference.cache
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\AddEditWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\AuthorizationWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\MainWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\RefreshWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\TableWindow.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\App.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2_Content.g.cs
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2_MarkupCompile.cache
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2_MarkupCompile.lref
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\AddEditWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\AuthorizationWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\MainWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\RefreshWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\TableWindow.baml
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2.g.resources
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2.Properties.Resources.resources
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2.csproj.GenerateResource.cache
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2.csproj.CoreCompileInputs.cache
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2.csproj.CopyComplete
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2.exe
+D:\данные флешки\3 курс проекты и задачи (1)\РПМ 3 курс задачи\дэ2 (2)\obj\Debug\дэ2.pdb
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\AddEditWindow.g.cs
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\AuthorizationWindow.g.cs
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\RefreshWindow.g.cs
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\TableWindow.g.cs
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\App.g.cs
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2_Content.g.cs
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2_MarkupCompile.cache
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2_MarkupCompile.lref
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2.exe
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2.pdb
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\bin\Debug\дэ2.exe.config
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\bin\Debug\дэ2.exe
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\bin\Debug\дэ2.pdb
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\AddEditWindow.baml
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\AuthorizationWindow.baml
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\RefreshWindow.baml
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\TableWindow.baml
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2.g.resources
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2.Properties.Resources.resources
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2.csproj.GenerateResource.cache
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ЮЛЯ\ДЭМО ЭКЗАМЕН\дэ2\obj\Debug\дэ2.csproj.CopyComplete
+C:\Users\user\Desktop\demo\дэ2\bin\Debug\дэ2.exe.config
+C:\Users\user\Desktop\demo\дэ2\bin\Debug\дэ2.exe
+C:\Users\user\Desktop\demo\дэ2\bin\Debug\дэ2.pdb
+C:\Users\user\Desktop\demo\дэ2\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\demo\дэ2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\demo\дэ2\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\demo\дэ2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\demo\дэ2\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\AddEditWindow.g.cs
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\AuthorizationWindow.g.cs
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\RefreshWindow.g.cs
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\TableWindow.g.cs
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\App.g.cs
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2_Content.g.cs
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2_MarkupCompile.cache
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2_MarkupCompile.lref
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\AddEditWindow.baml
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\AuthorizationWindow.baml
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\RefreshWindow.baml
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\TableWindow.baml
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2.g.resources
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2.Properties.Resources.resources
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2.csproj.GenerateResource.cache
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2.csproj.CopyComplete
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2.exe
+C:\Users\user\Desktop\demo\дэ2\obj\Debug\дэ2.pdb

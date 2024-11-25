@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище SchoolChildNew1Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="id_account" />
+          </Key>
+          <Property Name="id_account" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login_" Type="nvarchar" MaxLength="45" />
+          <Property Name="Password_" Type="nvarchar" MaxLength="45" />
+          <Property Name="id_role" Type="int" />
+        </EntityType>
+        <EntityType Name="Activities">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="namee" Type="varchar" MaxLength="50" />
+          <Property Name="age_group" Type="int" />
+        </EntityType>
+        <EntityType Name="Activity_Schedule">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="activity_id" Type="int" />
+          <Property Name="day_of_week" Type="varchar" MaxLength="25" />
+          <Property Name="time_start" Type="time" Precision="0" />
+          <Property Name="time_END" Type="time" Precision="0" />
+        </EntityType>
+        <EntityType Name="Children">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="parents_id" Type="int" />
+          <Property Name="namee" Type="varchar" MaxLength="50" />
+          <Property Name="age" Type="int" />
+          <Property Name="gender" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Date_Of_Enrolment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="enrollment_date" Type="date" />
+        </EntityType>
+        <EntityType Name="Enrollment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="child_id" Type="int" />
+          <Property Name="activity_schedule_id" Type="int" />
+          <Property Name="date_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Instructors">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="phone_number" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Instructors_Assignment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="activity_schedule_id" Type="int" />
+          <Property Name="instructor_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Parent_contacts">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="phone_number" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="Parents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="namee" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="parent_contact_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Requests">
+          <Key>
+            <PropertyRef Name="request_id" />
+          </Key>
+          <Property Name="request_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="children_id" Type="int" />
+          <Property Name="parents_id" Type="int" />
+          <Property Name="parent_contact_id" Type="int" />
+          <Property Name="enrollment_date_id" Type="int" />
+          <Property Name="activities_id" Type="int" />
+        </EntityType>
+        <EntityType Name="Role_">
+          <Key>
+            <PropertyRef Name="id_role" />
+          </Key>
+          <Property Name="id_role" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_role" Type="nvarchar" MaxLength="45" />
+        </EntityType>
+        <Association Name="FK__Account__id_role__59063A47">
+          <End Role="Role_" Type="Self.Role_" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role_">
+              <PropertyRef Name="id_role" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="id_role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Activity___activ__412EB0B6">
+          <End Role="Activities" Type="Self.Activities" Multiplicity="0..1" />
+          <End Role="Activity_Schedule" Type="Self.Activity_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Schedule">
+              <PropertyRef Name="activity_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Children__parent__3C69FB99">
+          <End Role="Parents" Type="Self.Parents" Multiplicity="0..1" />
+          <End Role="Children" Type="Self.Children" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parents">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Children">
+              <PropertyRef Name="parents_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Enrollmen__activ__47DBAE45">
+          <End Role="Activity_Schedule" Type="Self.Activity_Schedule" Multiplicity="0..1" />
+          <End Role="Enrollment" Type="Self.Enrollment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activity_Schedule">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Enrollment">
+              <PropertyRef Name="activity_schedule_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Enrollmen__child__45F365D3">
+          <End Role="Children" Type="Self.Children" Multiplicity="0..1" />
+          <End Role="Enrollment" Type="Self.Enrollment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Children">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Enrollment">
+              <PropertyRef Name="child_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Enrollmen__date___46E78A0C">
+          <End Role="Date_Of_Enrolment" Type="Self.Date_Of_Enrolment" Multiplicity="0..1" />
+          <End Role="Enrollment" Type="Self.Enrollment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Date_Of_Enrolment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Enrollment">
+              <PropertyRef Name="date_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Instructo__activ__4CA06362">
+          <End Role="Activity_Schedule" Type="Self.Activity_Schedule" Multiplicity="0..1" />
+          <End Role="Instructors_Assignment" Type="Self.Instructors_Assignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activity_Schedule">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Instructors_Assignment">
+              <PropertyRef Name="activity_schedule_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Instructo__instr__4D94879B">
+          <End Role="Instructors" Type="Self.Instructors" Multiplicity="0..1" />
+          <End Role="Instructors_Assignment" Type="Self.Instructors_Assignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Instructors">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Instructors_Assignment">
+              <PropertyRef Name="instructor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Parents__parent___398D8EEE">
+          <End Role="Parent_contacts" Type="Self.Parent_contacts" Multiplicity="0..1" />
+          <End Role="Parents" Type="Self.Parents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parent_contacts">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Parents">
+              <PropertyRef Name="parent_contact_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__activi__5441852A">
+          <End Role="Activities" Type="Self.Activities" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="activities_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__childr__5070F446">
+          <End Role="Children" Type="Self.Children" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Children">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="children_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__enroll__534D60F1">
+          <End Role="Date_Of_Enrolment" Type="Self.Date_Of_Enrolment" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Date_Of_Enrolment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="enrollment_date_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__parent__5165187F">
+          <End Role="Parents" Type="Self.Parents" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parents">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="parents_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__parent__52593CB8">
+          <End Role="Parent_contacts" Type="Self.Parent_contacts" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parent_contacts">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="parent_contact_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище SchoolChildNew1ModelContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activities" EntityType="Self.Activities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Activity_Schedule" EntityType="Self.Activity_Schedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Children" EntityType="Self.Children" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Date_Of_Enrolment" EntityType="Self.Date_Of_Enrolment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Enrollment" EntityType="Self.Enrollment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Instructors" EntityType="Self.Instructors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Instructors_Assignment" EntityType="Self.Instructors_Assignment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parent_contacts" EntityType="Self.Parent_contacts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parents" EntityType="Self.Parents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Requests" EntityType="Self.Requests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role_" EntityType="Self.Role_" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Account__id_role__59063A47" Association="Self.FK__Account__id_role__59063A47">
+            <End Role="Role_" EntitySet="Role_" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Activity___activ__412EB0B6" Association="Self.FK__Activity___activ__412EB0B6">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_Schedule" EntitySet="Activity_Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Children__parent__3C69FB99" Association="Self.FK__Children__parent__3C69FB99">
+            <End Role="Parents" EntitySet="Parents" />
+            <End Role="Children" EntitySet="Children" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Enrollmen__activ__47DBAE45" Association="Self.FK__Enrollmen__activ__47DBAE45">
+            <End Role="Activity_Schedule" EntitySet="Activity_Schedule" />
+            <End Role="Enrollment" EntitySet="Enrollment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Enrollmen__child__45F365D3" Association="Self.FK__Enrollmen__child__45F365D3">
+            <End Role="Children" EntitySet="Children" />
+            <End Role="Enrollment" EntitySet="Enrollment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Enrollmen__date___46E78A0C" Association="Self.FK__Enrollmen__date___46E78A0C">
+            <End Role="Date_Of_Enrolment" EntitySet="Date_Of_Enrolment" />
+            <End Role="Enrollment" EntitySet="Enrollment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Instructo__activ__4CA06362" Association="Self.FK__Instructo__activ__4CA06362">
+            <End Role="Activity_Schedule" EntitySet="Activity_Schedule" />
+            <End Role="Instructors_Assignment" EntitySet="Instructors_Assignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Instructo__instr__4D94879B" Association="Self.FK__Instructo__instr__4D94879B">
+            <End Role="Instructors" EntitySet="Instructors" />
+            <End Role="Instructors_Assignment" EntitySet="Instructors_Assignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Parents__parent___398D8EEE" Association="Self.FK__Parents__parent___398D8EEE">
+            <End Role="Parent_contacts" EntitySet="Parent_contacts" />
+            <End Role="Parents" EntitySet="Parents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__activi__5441852A" Association="Self.FK__Requests__activi__5441852A">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__childr__5070F446" Association="Self.FK__Requests__childr__5070F446">
+            <End Role="Children" EntitySet="Children" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__enroll__534D60F1" Association="Self.FK__Requests__enroll__534D60F1">
+            <End Role="Date_Of_Enrolment" EntitySet="Date_Of_Enrolment" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__parent__5165187F" Association="Self.FK__Requests__parent__5165187F">
+            <End Role="Parents" EntitySet="Parents" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__parent__52593CB8" Association="Self.FK__Requests__parent__52593CB8">
+            <End Role="Parent_contacts" EntitySet="Parent_contacts" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SchoolChildNew1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="id_account" />
+          </Key>
+          <Property Name="id_account" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login_" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="Password_" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="id_role" Type="Int32" />
+          <NavigationProperty Name="Role_" Relationship="Self.FK__Account__id_role__59063A47" FromRole="Account" ToRole="Role_" />
+        </EntityType>
+        <EntityType Name="Activities">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="namee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="age_group" Type="Int32" />
+          <NavigationProperty Name="Activity_Schedule" Relationship="Self.FK__Activity___activ__412EB0B6" FromRole="Activities" ToRole="Activity_Schedule" />
+          <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__activi__5441852A" FromRole="Activities" ToRole="Requests" />
+        </EntityType>
+        <EntityType Name="Activity_Schedule">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="activity_id" Type="Int32" />
+          <Property Name="day_of_week" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="time_start" Type="Time" Precision="0" />
+          <Property Name="time_END" Type="Time" Precision="0" />
+          <NavigationProperty Name="Activities" Relationship="Self.FK__Activity___activ__412EB0B6" FromRole="Activity_Schedule" ToRole="Activities" />
+          <NavigationProperty Name="Enrollment" Relationship="Self.FK__Enrollmen__activ__47DBAE45" FromRole="Activity_Schedule" ToRole="Enrollment" />
+          <NavigationProperty Name="Instructors_Assignment" Relationship="Self.FK__Instructo__activ__4CA06362" FromRole="Activity_Schedule" ToRole="Instructors_Assignment" />
+        </EntityType>
+        <EntityType Name="Children">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="parents_id" Type="Int32" />
+          <Property Name="namee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="age" Type="Int32" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Parents" Relationship="Self.FK__Children__parent__3C69FB99" FromRole="Children" ToRole="Parents" />
+          <NavigationProperty Name="Enrollment" Relationship="Self.FK__Enrollmen__child__45F365D3" FromRole="Children" ToRole="Enrollment" />
+          <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__childr__5070F446" FromRole="Children" ToRole="Requests" />
+        </EntityType>
+        <EntityType Name="Date_Of_Enrolment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="enrollment_date" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Enrollment" Relationship="Self.FK__Enrollmen__date___46E78A0C" FromRole="Date_Of_Enrolment" ToRole="Enrollment" />
+          <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__enroll__534D60F1" FromRole="Date_Of_Enrolment" ToRole="Requests" />
+        </EntityType>
+        <EntityType Name="Enrollment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="child_id" Type="Int32" />
+          <Property Name="activity_schedule_id" Type="Int32" />
+          <Property Name="date_id" Type="Int32" />
+          <NavigationProperty Name="Activity_Schedule" Relationship="Self.FK__Enrollmen__activ__47DBAE45" FromRole="Enrollment" ToRole="Activity_Schedule" />
+          <NavigationProperty Name="Children" Relationship="Self.FK__Enrollmen__child__45F365D3" FromRole="Enrollment" ToRole="Children" />
+          <NavigationProperty Name="Date_Of_Enrolment" Relationship="Self.FK__Enrollmen__date___46E78A0C" FromRole="Enrollment" ToRole="Date_Of_Enrolment" />
+        </EntityType>
+        <EntityType Name="Instructors">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phone_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Instructors_Assignment" Relationship="Self.FK__Instructo__instr__4D94879B" FromRole="Instructors" ToRole="Instructors_Assignment" />
+        </EntityType>
+        <EntityType Name="Instructors_Assignment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="activity_schedule_id" Type="Int32" />
+          <Property Name="instructor_id" Type="Int32" />
+          <NavigationProperty Name="Activity_Schedule" Relationship="Self.FK__Instructo__activ__4CA06362" FromRole="Instructors_Assignment" ToRole="Activity_Schedule" />
+          <NavigationProperty Name="Instructors" Relationship="Self.FK__Instructo__instr__4D94879B" FromRole="Instructors_Assignment" ToRole="Instructors" />
+        </EntityType>
+        <EntityType Name="Parent_contacts">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="phone_number" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Parents" Relationship="Self.FK__Parents__parent___398D8EEE" FromRole="Parent_contacts" ToRole="Parents" />
+          <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__parent__52593CB8" FromRole="Parent_contacts" ToRole="Requests" />
+        </EntityType>
+        <EntityType Name="Parents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="namee" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="parent_contact_id" Type="Int32" />
+          <NavigationProperty Name="Children" Relationship="Self.FK__Children__parent__3C69FB99" FromRole="Parents" ToRole="Children" />
+          <NavigationProperty Name="Parent_contacts" Relationship="Self.FK__Parents__parent___398D8EEE" FromRole="Parents" ToRole="Parent_contacts" />
+          <NavigationProperty Name="Requests" Relationship="Self.FK__Requests__parent__5165187F" FromRole="Parents" ToRole="Requests" />
+        </EntityType>
+        <EntityType Name="Requests">
+          <Key>
+            <PropertyRef Name="request_id" />
+          </Key>
+          <Property Name="request_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="children_id" Type="Int32" />
+          <Property Name="parents_id" Type="Int32" />
+          <Property Name="parent_contact_id" Type="Int32" />
+          <Property Name="enrollment_date_id" Type="Int32" />
+          <Property Name="activities_id" Type="Int32" />
+          <NavigationProperty Name="Activities" Relationship="Self.FK__Requests__activi__5441852A" FromRole="Requests" ToRole="Activities" />
+          <NavigationProperty Name="Children" Relationship="Self.FK__Requests__childr__5070F446" FromRole="Requests" ToRole="Children" />
+          <NavigationProperty Name="Date_Of_Enrolment" Relationship="Self.FK__Requests__enroll__534D60F1" FromRole="Requests" ToRole="Date_Of_Enrolment" />
+          <NavigationProperty Name="Parent_contacts" Relationship="Self.FK__Requests__parent__52593CB8" FromRole="Requests" ToRole="Parent_contacts" />
+          <NavigationProperty Name="Parents" Relationship="Self.FK__Requests__parent__5165187F" FromRole="Requests" ToRole="Parents" />
+        </EntityType>
+        <EntityType Name="Role_">
+          <Key>
+            <PropertyRef Name="id_role" />
+          </Key>
+          <Property Name="id_role" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_role" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Account" Relationship="Self.FK__Account__id_role__59063A47" FromRole="Role_" ToRole="Account" />
+        </EntityType>
+        <Association Name="FK__Account__id_role__59063A47">
+          <End Role="Role_" Type="Self.Role_" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role_">
+              <PropertyRef Name="id_role" />
+            </Principal>
+            <Dependent Role="Account">
+              <PropertyRef Name="id_role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Activity___activ__412EB0B6">
+          <End Role="Activities" Type="Self.Activities" Multiplicity="0..1" />
+          <End Role="Activity_Schedule" Type="Self.Activity_Schedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Activity_Schedule">
+              <PropertyRef Name="activity_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__activi__5441852A">
+          <End Role="Activities" Type="Self.Activities" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activities">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="activities_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Enrollmen__activ__47DBAE45">
+          <End Role="Activity_Schedule" Type="Self.Activity_Schedule" Multiplicity="0..1" />
+          <End Role="Enrollment" Type="Self.Enrollment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activity_Schedule">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Enrollment">
+              <PropertyRef Name="activity_schedule_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Instructo__activ__4CA06362">
+          <End Role="Activity_Schedule" Type="Self.Activity_Schedule" Multiplicity="0..1" />
+          <End Role="Instructors_Assignment" Type="Self.Instructors_Assignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Activity_Schedule">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Instructors_Assignment">
+              <PropertyRef Name="activity_schedule_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Children__parent__3C69FB99">
+          <End Role="Parents" Type="Self.Parents" Multiplicity="0..1" />
+          <End Role="Children" Type="Self.Children" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parents">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Children">
+              <PropertyRef Name="parents_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Enrollmen__child__45F365D3">
+          <End Role="Children" Type="Self.Children" Multiplicity="0..1" />
+          <End Role="Enrollment" Type="Self.Enrollment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Children">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Enrollment">
+              <PropertyRef Name="child_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__childr__5070F446">
+          <End Role="Children" Type="Self.Children" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Children">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="children_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Enrollmen__date___46E78A0C">
+          <End Role="Date_Of_Enrolment" Type="Self.Date_Of_Enrolment" Multiplicity="0..1" />
+          <End Role="Enrollment" Type="Self.Enrollment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Date_Of_Enrolment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Enrollment">
+              <PropertyRef Name="date_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__enroll__534D60F1">
+          <End Role="Date_Of_Enrolment" Type="Self.Date_Of_Enrolment" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Date_Of_Enrolment">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="enrollment_date_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Instructo__instr__4D94879B">
+          <End Role="Instructors" Type="Self.Instructors" Multiplicity="0..1" />
+          <End Role="Instructors_Assignment" Type="Self.Instructors_Assignment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Instructors">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Instructors_Assignment">
+              <PropertyRef Name="instructor_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Parents__parent___398D8EEE">
+          <End Role="Parent_contacts" Type="Self.Parent_contacts" Multiplicity="0..1" />
+          <End Role="Parents" Type="Self.Parents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parent_contacts">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Parents">
+              <PropertyRef Name="parent_contact_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__parent__52593CB8">
+          <End Role="Parent_contacts" Type="Self.Parent_contacts" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parent_contacts">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="parent_contact_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Requests__parent__5165187F">
+          <End Role="Parents" Type="Self.Parents" Multiplicity="0..1" />
+          <End Role="Requests" Type="Self.Requests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parents">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Requests">
+              <PropertyRef Name="parents_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SchoolChildNew1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Account" EntityType="Self.Account" />
+          <EntitySet Name="Activities" EntityType="Self.Activities" />
+          <EntitySet Name="Activity_Schedule" EntityType="Self.Activity_Schedule" />
+          <EntitySet Name="Children" EntityType="Self.Children" />
+          <EntitySet Name="Date_Of_Enrolment" EntityType="Self.Date_Of_Enrolment" />
+          <EntitySet Name="Enrollment" EntityType="Self.Enrollment" />
+          <EntitySet Name="Instructors" EntityType="Self.Instructors" />
+          <EntitySet Name="Instructors_Assignment" EntityType="Self.Instructors_Assignment" />
+          <EntitySet Name="Parent_contacts" EntityType="Self.Parent_contacts" />
+          <EntitySet Name="Parents" EntityType="Self.Parents" />
+          <EntitySet Name="Requests" EntityType="Self.Requests" />
+          <EntitySet Name="Role_" EntityType="Self.Role_" />
+          <AssociationSet Name="FK__Account__id_role__59063A47" Association="Self.FK__Account__id_role__59063A47">
+            <End Role="Role_" EntitySet="Role_" />
+            <End Role="Account" EntitySet="Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Activity___activ__412EB0B6" Association="Self.FK__Activity___activ__412EB0B6">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Activity_Schedule" EntitySet="Activity_Schedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__activi__5441852A" Association="Self.FK__Requests__activi__5441852A">
+            <End Role="Activities" EntitySet="Activities" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Enrollmen__activ__47DBAE45" Association="Self.FK__Enrollmen__activ__47DBAE45">
+            <End Role="Activity_Schedule" EntitySet="Activity_Schedule" />
+            <End Role="Enrollment" EntitySet="Enrollment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Instructo__activ__4CA06362" Association="Self.FK__Instructo__activ__4CA06362">
+            <End Role="Activity_Schedule" EntitySet="Activity_Schedule" />
+            <End Role="Instructors_Assignment" EntitySet="Instructors_Assignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Children__parent__3C69FB99" Association="Self.FK__Children__parent__3C69FB99">
+            <End Role="Parents" EntitySet="Parents" />
+            <End Role="Children" EntitySet="Children" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Enrollmen__child__45F365D3" Association="Self.FK__Enrollmen__child__45F365D3">
+            <End Role="Children" EntitySet="Children" />
+            <End Role="Enrollment" EntitySet="Enrollment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__childr__5070F446" Association="Self.FK__Requests__childr__5070F446">
+            <End Role="Children" EntitySet="Children" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Enrollmen__date___46E78A0C" Association="Self.FK__Enrollmen__date___46E78A0C">
+            <End Role="Date_Of_Enrolment" EntitySet="Date_Of_Enrolment" />
+            <End Role="Enrollment" EntitySet="Enrollment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__enroll__534D60F1" Association="Self.FK__Requests__enroll__534D60F1">
+            <End Role="Date_Of_Enrolment" EntitySet="Date_Of_Enrolment" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Instructo__instr__4D94879B" Association="Self.FK__Instructo__instr__4D94879B">
+            <End Role="Instructors" EntitySet="Instructors" />
+            <End Role="Instructors_Assignment" EntitySet="Instructors_Assignment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Parents__parent___398D8EEE" Association="Self.FK__Parents__parent___398D8EEE">
+            <End Role="Parent_contacts" EntitySet="Parent_contacts" />
+            <End Role="Parents" EntitySet="Parents" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__parent__52593CB8" Association="Self.FK__Requests__parent__52593CB8">
+            <End Role="Parent_contacts" EntitySet="Parent_contacts" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Requests__parent__5165187F" Association="Self.FK__Requests__parent__5165187F">
+            <End Role="Parents" EntitySet="Parents" />
+            <End Role="Requests" EntitySet="Requests" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище SchoolChildNew1ModelContainer" CdmEntityContainer="SchoolChildNew1Entities">
+          <EntitySetMapping Name="Account">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="id_account" ColumnName="id_account" />
+                <ScalarProperty Name="Login_" ColumnName="Login_" />
+                <ScalarProperty Name="Password_" ColumnName="Password_" />
+                <ScalarProperty Name="id_role" ColumnName="id_role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activities">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Activities">
+              <MappingFragment StoreEntitySet="Activities">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="namee" ColumnName="namee" />
+                <ScalarProperty Name="age_group" ColumnName="age_group" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Activity_Schedule">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Activity_Schedule">
+              <MappingFragment StoreEntitySet="Activity_Schedule">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="activity_id" ColumnName="activity_id" />
+                <ScalarProperty Name="day_of_week" ColumnName="day_of_week" />
+                <ScalarProperty Name="time_start" ColumnName="time_start" />
+                <ScalarProperty Name="time_END" ColumnName="time_END" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Children">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Children">
+              <MappingFragment StoreEntitySet="Children">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="parents_id" ColumnName="parents_id" />
+                <ScalarProperty Name="namee" ColumnName="namee" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Date_Of_Enrolment">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Date_Of_Enrolment">
+              <MappingFragment StoreEntitySet="Date_Of_Enrolment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="enrollment_date" ColumnName="enrollment_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Enrollment">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Enrollment">
+              <MappingFragment StoreEntitySet="Enrollment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="child_id" ColumnName="child_id" />
+                <ScalarProperty Name="activity_schedule_id" ColumnName="activity_schedule_id" />
+                <ScalarProperty Name="date_id" ColumnName="date_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Instructors">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Instructors">
+              <MappingFragment StoreEntitySet="Instructors">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Instructors_Assignment">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Instructors_Assignment">
+              <MappingFragment StoreEntitySet="Instructors_Assignment">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="activity_schedule_id" ColumnName="activity_schedule_id" />
+                <ScalarProperty Name="instructor_id" ColumnName="instructor_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parent_contacts">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Parent_contacts">
+              <MappingFragment StoreEntitySet="Parent_contacts">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parents">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Parents">
+              <MappingFragment StoreEntitySet="Parents">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="namee" ColumnName="namee" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="parent_contact_id" ColumnName="parent_contact_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Requests">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Requests">
+              <MappingFragment StoreEntitySet="Requests">
+                <ScalarProperty Name="request_id" ColumnName="request_id" />
+                <ScalarProperty Name="children_id" ColumnName="children_id" />
+                <ScalarProperty Name="parents_id" ColumnName="parents_id" />
+                <ScalarProperty Name="parent_contact_id" ColumnName="parent_contact_id" />
+                <ScalarProperty Name="enrollment_date_id" ColumnName="enrollment_date_id" />
+                <ScalarProperty Name="activities_id" ColumnName="activities_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Role_">
+            <EntityTypeMapping TypeName="SchoolChildNew1Model.Role_">
+              <MappingFragment StoreEntitySet="Role_">
+                <ScalarProperty Name="id_role" ColumnName="id_role" />
+                <ScalarProperty Name="name_role" ColumnName="name_role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

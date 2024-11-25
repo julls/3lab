@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5fca2281783347799880b9f228dc975a" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Account" Width="1.5" PointX="12" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Activities" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Activity_Schedule" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Children" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Date_Of_Enrolment" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Enrollment" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Instructors" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Instructors_Assignment" Width="1.5" PointX="7.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Parent_contacts" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Parents" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Requests" Width="1.5" PointX="10.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SchoolChildNew1Model.Role_" Width="1.5" PointX="9.75" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Account__id_role__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Activity___activ__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Requests__activi__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Enrollmen__activ__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Instructo__activ__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Children__parent__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Enrollmen__child__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Requests__childr__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Enrollmen__date___46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Requests__enroll__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Instructo__instr__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Parents__parent___398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Requests__parent__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="SchoolChildNew1Model.FK__Requests__parent__5165187F" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
